@@ -1,0 +1,29 @@
+
+<view>  
+  <form bindsubmit="formSubmit" bindreset="formReset" class="box">
+    <view class="page-section">
+      <view class="weui-cells__title">添加名称：</view>
+      <input class="weui-input" maxlength="20" name="addName" value='{{addName}}' placeholder="请输入要选择的名称" />
+    </view>
+    <view class="btn-area">
+      <button type="primary" formType="submit">添加</button>
+      <button type='warn' formType="reset">重置</button>
+    </view>
+  </form>
+  <view class="line"></view>
+  <view class="page-section">
+    <view>已添加的名称：</view>
+    <checkbox-group class="group">
+      <view class="label-1" wx:for="{{checkboxItems}}" wx:key="item.chooseName" bindtap="checkboxChange" data-gId='{{item._id}}' data-checked='{{item.checked}}'>
+        <label data-index="{{index}}">
+          <checkbox hidden value="{{item.chooseName}}" checked="{{item.checked}}"></checkbox>
+          <view class="label-1__icon">
+            <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+          </view>
+          <text class="label-1__text">{{item.chooseName}}</text>
+          <view class="delete" bindtap="deleteObj" data-gId='{{item._id}}'>×</view>
+        </label>
+      </view>
+    </checkbox-group>
+  </view>
+</view>

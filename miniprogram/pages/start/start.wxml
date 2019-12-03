@@ -1,0 +1,17 @@
+<!--pages/me/me.wxml-->
+<view class="counter">
+  <view class='box'>
+    <view>当前待选名称：</view>
+    <view wx:for="{{dataList}}" wx:key="item.chooseName">
+      <span class="show-name">{{item.chooseName}}</span>
+    </view>
+  </view>
+  <view class='box'>
+    <view>选定项：</view>
+    <view class='result'>{{resData}}</view>
+  </view>
+  <view class='box'>
+    <button type="primary" bindtap="start" hidden="{{iStart}}">开始</button>
+    <button type="warn" bindtap="stop" hidden="{{!iStart}}">停止</button>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+/* pages/me/me.wxss */
+.show-name{
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 10px 5px 0;
+  float: left;
+  height: 22px;line-height:22px;
+  border: 1px solid #f68c8c;
+  border-radius: 0.6em;
+  color: #f68c8c;
+}
+.counter{
+  padding: 10px;
+}
+.box{
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.result{
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  color: red;
+}
